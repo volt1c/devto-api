@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "devtoapi"
+version = "0.1.0"
+description = "Api which scrape data from dev.to"
+authors = ["Kamil Pawlaczyk <prgmr.kamil.pawlaczyk@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.scripts]
+"start:dev" = "devtoapi.scripts:start_dev"
+"start" = "devtoapi.scripts:start"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.72.0"
+uvicorn = "^0.17.0"
+
+[tool.poetry.dev-dependencies]
+pycodestyle = "^2.8.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
