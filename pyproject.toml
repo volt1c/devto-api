@@ -13,6 +13,8 @@ license = "MIT"
 python = "^3.10"
 fastapi = "^0.72.0"
 uvicorn = "^0.17.0"
+requests = "^2.27.1"
+bs4 = "^0.0.1"
 
 [tool.poetry.dev-dependencies]
 pycodestyle = "^2.8.0"
