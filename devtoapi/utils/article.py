@@ -6,7 +6,7 @@ class JSO(object):
 
 
 def scrap(html: str) -> dict:
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, features="html.parser")
     article = JSO()
 
     article_header = soup.find('header', id='main-title')
