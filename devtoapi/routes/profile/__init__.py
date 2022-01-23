@@ -9,10 +9,10 @@ user_router = APIRouter()
 
 @user_router.get("/", response_class=PlainTextResponse)
 async def index():
-    return "user/<username>"
+    return "profile/<name>"
 
 
-@user_router.get("/{username}/")
-async def scrape_user(username: str):
-    html = get('http://dev.to/' + username).content
+@user_router.get("/{name}/")
+async def scrape_profile(name: str):
+    html = get('http://dev.to/' + name).content
     return scrap(html),
