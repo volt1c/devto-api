@@ -1,12 +1,13 @@
 from requests import get
 from fastapi import APIRouter
+from fastapi.responses import PlainTextResponse
 
 from .scraper import scrap
 
 user_router = APIRouter()
 
 
-@user_router.get("/")
+@user_router.get("/", response_class=PlainTextResponse)
 async def index():
     return "user/<username>"
 

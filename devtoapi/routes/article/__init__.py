@@ -1,12 +1,13 @@
 from requests import get
 from fastapi import APIRouter
+from fastapi.responses import PlainTextResponse
 
 from .scraper import scrap
 
 article_router = APIRouter()
 
 
-@article_router.get("/")
+@article_router.get("/", response_class=PlainTextResponse)
 async def index():
     return "article/<author>/<title>"
 
