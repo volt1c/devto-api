@@ -1,13 +1,13 @@
 from bs4 import BeautifulSoup
 
 
-class Obj(object):
+class JSO(object):
     pass
 
 
 def scrap(html: str) -> dict:
     soup = BeautifulSoup(html)
-    article = Obj()
+    article = JSO()
 
     article_header = soup.find('header', id='main-title')
     article_body = soup.find('div', id='article-body')
@@ -21,7 +21,7 @@ def scrap(html: str) -> dict:
         article.tags.append(tag.get_text())
 
     header_author = article_header.find('a', class_='crayons-link')
-    author = Obj()
+    author = JSO()
     author.name = header_author.text
     author.username = header_author['href'][1:]
     article.author = author.__dict__
