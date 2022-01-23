@@ -1,7 +1,7 @@
 from requests import get
 from fastapi import APIRouter
 
-from devtoapi.utils.profile import scrap
+from .scraper import scrap
 
 user_router = APIRouter()
 

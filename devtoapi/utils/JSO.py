@@ -1,0 +1,2 @@
+class JSO(object):
+    pass

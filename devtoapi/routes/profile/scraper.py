@@ -1,9 +1,7 @@
 from email import header
 from bs4 import BeautifulSoup
 
-
-class JSO(object):
-    pass
+from devtoapi.utils.JSO import JSO
 
 
 def scrap(html: str) -> dict:
